@@ -1,9 +1,8 @@
-# Randomized Design Inspiration
-
-> Randomized inpspiration to hopefully spark design ideas. 
+# Song Lyrics Generator
+> Song lyrics that I like.
 
 ## What is this?
-- Website that generates random quotes and colors of inspiration.
+- Website that generates random song lyrics and background colors.
 
 ## How does it work? 
 - Predefined quotes and colors are loaded from a JSON file
