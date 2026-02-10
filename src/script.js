@@ -1,17 +1,17 @@
 console.log('👍 JS Connected');
 
 // Tailwind Background Utlities
-const backgrounds = ["bg-red-300", "bg-green-300", "bg-blue-300"];
+const backgrounds = ["bg-red-300", "bg-green-300", "bg-blue-600"];
 
 // Sample design quotes JSON data
 const quotes = [
   {
-    quote: "Quote 0",
-    author: "Citation 0"
+    quote: "And I've had recurring nightmares that I was loved for who I am, and missed the opportunity to be a better man.",
+    author: "Hoodoo, Muse"
   },
   {
-    quote: "Quote 1",
-    author: "Citation 1"
+    quote: "Oh my love was punished long ago, it took the death of hope to let you go",
+    author: "Snuff, Slipknot"
   },
   {
     quote: "Quote 2",
