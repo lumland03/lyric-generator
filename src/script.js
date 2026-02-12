@@ -1,7 +1,7 @@
 console.log('👍 JS Connected');
 
 // Tailwind Background Utlities
-const backgrounds = ["bg-red-300", "bg-green-300", "bg-blue-600"];
+const backgrounds = ["bg-red-300", "bg-green-300", "bg-blue-600  bg-emerald-300"];
 
 // Sample design quotes JSON data
 const quotes = [
@@ -14,8 +14,8 @@ const quotes = [
     author: "Snuff, Slipknot"
   },
   {
-    quote: "Quote 2",
-    author: "Citation 2"
+    quote: "Now I think I understand how this world can overcome a man",
+    author: "Fiction, Avenged Sevenfold"
   }
 ];
 
