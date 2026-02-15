@@ -78,7 +78,7 @@ const quotes = [
     
   },
   {
-    quote: "Don't morn for me, you're not the one to place the blame. As bottles call my name, I won't see you tonight.",
+    quote: "Don't mourn for me, you're not the one to place the blame. As bottles call my name, I won't see you tonight.",
     author: 'Avenged Sevenfold, "I Won’t See You Tonight"',
     // background: "bg-[url(./assets/seeYouTonight.png)] bg-contain bg-center"
     
