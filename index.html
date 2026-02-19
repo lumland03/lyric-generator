@@ -13,10 +13,13 @@
 
   </head>
 
-<body id="body" class="min-h-screen flex items-center justify-center bg-linear-to-tr from-red-400 via-yellow-600 to-yellow-300">
-
+<body id="body" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+<div id="bg-container" class="absolute inset-0">
+    <div id="bg1" class="absolute inset-0 transition-opacity duration-700 opacity-100 bg-gradient-to-tr from-red-400 via-yellow-600 to-yellow-300"></div>
+    <div id="bg2" class="absolute inset-0 transition-opacity duration-700 opacity-0"></div>
+  </div>
   <!-- Main Content Container   -->
-  <main class="p-8 max-w-2xl w-full relative m-4 ">
+  <main class="p-8 max-w-2xl w-full relative m-4 z-10">
 
     <h1 class=" text-center text-5xl  bg-white/30 m-3 p-8 self-center rounded-lg text-white font-bold">
       Lyric Generator 

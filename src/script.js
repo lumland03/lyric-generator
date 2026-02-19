@@ -91,8 +91,19 @@ const body = document.querySelector("#body");
 const quoteText = document.querySelector("#quote-text");
 const quoteAuthor = document.querySelector("#quote-author");
 const refreshBtn = document.querySelector("#refresh-btn");
+const bg1 = document.querySelector("#bg1");
+const bg2 = document.querySelector("#bg2");
 
-// Function to get random quote and background
+// // Function to get random quote and background
+// function getRandomQuote() {
+//   const randomIndex = Math.floor(Math.random() * quotes.length);
+//   const selectedQuote = quotes[randomIndex];
+
+// Track current background layer
+let currentBg = bg1;
+let nextBg = bg2;
+let currentBackground = "bg-gradient-to-tr from-red-400 via-yellow-600 to-yellow-300";
+// Function to get random quote and background with crossfade
 function getRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);
   const selectedQuote = quotes[randomIndex];
@@ -104,9 +115,23 @@ function getRandomQuote() {
   // Get random background
   const randomBgIndex = Math.floor(Math.random() * backgrounds.length);
   const newBackground = backgrounds[randomBgIndex];
-  // const newBackground = selectedQuote.background;
-  // Replace entire class attribute
-  body.className = `${newBackground} min-h-screen flex items-center justify-center transition-all duration-700`;
+
+  // Set new background on the hidden layer (include transition to ensure it animates)
+  nextBg.className = `absolute inset-0 transition-opacity duration-700 opacity-0 ${newBackground}`;
+
+  // Crossfade: fade in nextBg and fade out currentBg simultaneously
+  nextBg.classList.remove("opacity-0");
+  nextBg.classList.add("opacity-100");
+  currentBg.classList.remove("opacity-100");
+  currentBg.classList.add("opacity-0");
+
+  // After transition, reset and swap layers
+  setTimeout(() => {
+    currentBg.className = "absolute inset-0 transition-opacity duration-700 opacity-0"; // Remove old gradient, reset to hidden
+    nextBg.className = `absolute inset-0 transition-opacity duration-700 opacity-100 ${newBackground}`; // Keep new gradient, set to visible
+    [currentBg, nextBg] = [nextBg, currentBg]; // Swap
+    currentBackground = newBackground;
+  }, 700); // Match duration-700
 }
 
 // Add event listener to button
